@@ -1,0 +1,20 @@
+./page.js
+Zabezpiecza tabele przed użytkownikami, którzy nie są adminami (useEffect)
+Pobiera liste użytkowników (useQuery) oraz renderuje ./SearchTable.jsx (funkcja wyszukiwania)
+Renderuje Tytuł i opis strony
+
+./SearchTable
+Obsługuje wyszukiwanie uczniów po nazwie i wyniki przekazuje do ./UsersTable (tabela)
+
+./UsersTable
+Generuje tabele na podstawie danych z ./SearchTable 
+Do kazdego rekordu generuje odpowiedni guzik do zmiany uprawnień (NaUcznia, NaAdmina)
+
+./ZmienUprawnienia
+Wyswietla i obsługuje guzik do zmiany uprawnień (uczen/admin)
+Request wykonuje "useMutation", po poprawnej zmianie danych w db, nastepuje ponowne pobranie listy użytkowników aby odświeżyć tabele "invalidateQueries"
+ConfirmationComponent to wyskakujące okienko do potwierdzenia wyboru
+
+./UsunUsera 
+UWAGA!
+usuwa użytkownika oraz wszystkie jego dzieła (komentarze, problemy, zbiórki, wpłaty)
